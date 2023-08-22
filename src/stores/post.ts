@@ -82,6 +82,7 @@ export const usePostStore = defineStore('post', () => {
 
       setTimeout(() => {
         const newCardHistory = document.querySelectorAll('.card-history')[0]
+        gsap.set(newCardHistory, {y:-50, opacity:0})
         gsap.to(newCardHistory, {
           y: 0,
           opacity: 1,
