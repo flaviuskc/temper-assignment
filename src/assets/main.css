@@ -1,35 +1,25 @@
-@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+@layer base {
+    :root {
+        --color-primary: #6357B1;
+        --color-secondary: #25FF90;
+    }
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.bg-diagonal {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-top: 24vw solid var(--color-primary);
+    position: absolute;
+    @media (min-width:641px) {
+        border-top: 12vw solid var(--color-primary);
+    }
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.bg-secondary{
+    background-color: var(--color-secondary);
 }
