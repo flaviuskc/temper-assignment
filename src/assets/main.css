@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary: #6357B1;
+        --color-secondary: #25FF90;
+    }
+}
+
+.bg-diagonal {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-top: 24vw solid var(--color-primary);
+    position: absolute;
+    @media (min-width:641px) {
+        border-top: 12vw solid var(--color-primary);
+    }
+}
+
+.bg-secondary{
+    background-color: var(--color-secondary);
+}
